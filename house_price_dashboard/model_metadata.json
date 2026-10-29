@@ -1,0 +1,99 @@
+{
+  "schema_version": "house-price-v1",
+  "target": "house_price_rm",
+  "currency": "RM",
+  "model_name": "HistGradientBoostingRegressor",
+  "trained_at_utc": "2026-10-29T06:23:47.713463+00:00",
+  "dataset_sha256": "e2278653c9d43fb375810eb66c90b4f31339ab721c3781ed67847920aeb74f90",
+  "feature_order": [
+    "floor_area_m2",
+    "bedrooms",
+    "bathrooms",
+    "property_age_years",
+    "location_zone",
+    "property_type",
+    "parking_spaces"
+  ],
+  "column_aliases": {},
+  "data_audit": {
+    "source_rows": 2000,
+    "missing_target_rows_removed": 0,
+    "exact_duplicate_feature_and_target_rows_removed": 0,
+    "usable_rows": 2000,
+    "data_note": "The workbook's Guide sheet identifies these records as synthetic teaching data. Test scores do not demonstrate real-world valuation accuracy.",
+    "feature_missing_counts": {
+      "floor_area_m2": 16,
+      "bedrooms": 16,
+      "bathrooms": 0,
+      "property_age_years": 0,
+      "location_zone": 0,
+      "property_type": 0,
+      "parking_spaces": 0
+    }
+  },
+  "data_note": "The workbook's Guide sheet identifies these records as synthetic teaching data. Test scores do not demonstrate real-world valuation accuracy.",
+  "training_rows": 1600,
+  "test_fraction": 0.2,
+  "random_seed": 42,
+  "cv_folds": 5,
+  "selection_metric": "lowest mean training CV RMSE",
+  "best_cv_rmse": 94114.0001881408,
+  "held_out_test": {
+    "r2": 0.9487982549735866,
+    "rmse": 91695.92720317765,
+    "mae": 64325.52929470872,
+    "rows": 400
+  },
+  "baseline_test_rmse": 405313.58479352755,
+  "best_parameters": {
+    "model__l2_regularization": 10.0,
+    "model__learning_rate": 0.05,
+    "model__max_leaf_nodes": 15
+  },
+  "training_ranges": {
+    "floor_area_m2": [
+      65.2,
+      479.5
+    ],
+    "bedrooms": [
+      1.0,
+      7.0
+    ],
+    "bathrooms": [
+      1.0,
+      6.0
+    ],
+    "property_age_years": [
+      0.0,
+      50.0
+    ],
+    "parking_spaces": [
+      0.0,
+      4.0
+    ]
+  },
+  "training_categories": {
+    "location_zone": [
+      "Rural",
+      "Suburban",
+      "Town_Periphery",
+      "Urban_Centre"
+    ],
+    "property_type": [
+      "Apartment",
+      "Detached",
+      "Semi_Detached",
+      "Terrace"
+    ]
+  },
+  "package_versions": {
+    "streamlit": "1.66.1",
+    "pandas": "2.2.3",
+    "scikit-learn": "1.6.1",
+    "joblib": "1.6.0",
+    "openpyxl": "3.1.5"
+  },
+  "evaluation_source": "One held-out evaluation after training-only cross-validation; no full-data refit.",
+  "software_test_only": false,
+  "split_assumption": "Rows represent independent properties; no time or geographic grouping is available."
+}
