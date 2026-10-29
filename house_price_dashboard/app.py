@@ -406,7 +406,7 @@ def main():
             st.caption("Transformed feature display unavailable: " + result["vector_error"])
     st.divider()
     st.caption(DISCLAIMER)
-    st.markdown("**Developed by**  \nDanich Khawngam  \nNatthanicha Rodtua \nArada Konglek \nTanaphat Chuparat \nPhattharamon Kamonlimsakun \nFaculty of Intelligent Computing \n"
+    st.markdown("**Developed by**  \nDanich Khawngam \nNatthanicha Rodtua \nArada Konglek \nTanaphat Chuparat \nPhattharamon Kamonlimsakun \nFaculty of Intelligent Computing \n"
                 "Walailak University & Universiti Malaysia Perlis")
 
 
